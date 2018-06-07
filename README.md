@@ -20,8 +20,8 @@ It is expressed in three numerical values *(L,a,b)* as
 Each and every image while training phase is first converted to the Lab color space then passed it further for processing. The Luminance(L) channel is nothing but the grayscale image of the color image given for the training.
 
 >*Why do we use Lab color space?*
-
-> The reason for using this over RGB because euclidean distance in Lab is more similar to how humans perceive color differences[1].
+>
+> -The reason for using this over RGB because euclidean distance in Lab is more similar to how humans perceive color differences[1].
 
 ## Approaches
 

@@ -21,7 +21,7 @@ Each and every image while training phase is first converted to the Lab color sp
 
 >*Why do we use Lab color space?*
 >
-> -The reason for using this over RGB because euclidean distance in Lab is more similar to how humans perceive color differences[1].
+> -The reason for using this over RGB because euclidean distance in Lab is more similar to how humans perceive color differences[[2]](http://cs229.stanford.edu/proj2013/KabirzadehSousaBlaes-AutomaticColorizationOfGrayscaleImages.pdf).
 
 ## Approaches
 
@@ -65,6 +65,13 @@ Limitation of Data and computation resource we look into hand-picked features, w
 
 ### 3. Convolutional Neural Network (CNN)
 
+Now instead of hand picking features with feature descriptor SURF, we tried to use CNN to eliminate the feature extraction step. 
+Our CNN works the same way like the previous method, Only for each randomly selected pixel instead of taking feature in 20x20 window size, we take the whole patch, normalize it and feed it into a CNN. 
+Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained the model with same sets of images as the training set.
+
+![Image](images/CNN.png)
+
+**Observation:** Training the CNN requires large no of data points, as we are using the CNN in the pixel patch level, we take around 2000 pixels from each of the 10 images of patch size 48x48. Also, CNN requires a lot of computation resources for this task and lot of parameter tuning.
 
 ## References
 

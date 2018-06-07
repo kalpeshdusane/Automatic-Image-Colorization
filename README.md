@@ -15,7 +15,10 @@ It is expressed in three numerical values *(L,a,b)* as
 - **a** for the green–red color components
 - **b** for the blue–yellow color components
 
-![image](readmeImages/lab_space.jpg)
+![image](readmeImages/lab.png)
+
+![image](readmeImages/lab1.png)
+
 
 Each and every image while training phase is first converted to the Lab color space then passed it further for processing. The Luminance(L) channel is nothing but the grayscale image of the color image given for the training.
 
@@ -91,6 +94,10 @@ Our CNN works the same way like the previous method, Only for each randomly sele
 Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained the model with same sets of images as the training set.
 
 ![Image](readmeImages/VGG16.png)
+
+**CNN Architecture:**
+
+![Image](readmeImages/CNN.png)
 
 **Outputs:**
 

@@ -111,7 +111,21 @@ Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained 
 
 ![Image](readmeImages/BestResultwithblur.png)
 
+## Dependencies
+
+	python3.5
+	cv2
+	sklearn
+	scipy
+	numpy
+
 ## References
 
 1. [Colorful Image Colorization](https://arxiv.org/pdf/1603.08511.pdf) by Richard Zhang, Phillip Isola, and Alexei A. Efros
-2. [Automatic Colorization of Grayscale Images](http://cs229.stanford.edu/proj2013/KabirzadehSousaBlaes-AutomaticColorizationOfGrayscaleImages.pdf)
+2. [Automatic Colorization of Grayscale Images](http://cs229.stanford.edu/proj2013/KabirzadehSousaBlaes-AutomaticColorizationOfGrayscaleImages.pdf) by Austin Sousa, Rasoul Kabirzadeh, and Patrick Blaes
+
+  
+## Interesting Application To do
+
+[Transferring Color to Greyscale Images](https://dl.acm.org/citation.cfm?id=566576) by Tomihisa Welsh, Michael Ashikhmin, and Klaus Mueller
+

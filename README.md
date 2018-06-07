@@ -53,13 +53,15 @@ Here as a feature, we take the L values of a patch of size 3x3 around the pixel,
 
 ### 2. Combination of Feed Forward Neural Network and Hand Picked Features
 
-Limitation of Data and computation resource we look into hand-picked features, we followed most of the approach from this paper[1]. Here we used the CVCL MIT Opencountry Dataset [link](http://cvcl.mit.edu/database.htm). We took a subset of images (11 images) used that to do the training and we used another subset of 10 images to colorize.
+Limitation of Data and computation resource we look into hand-picked features, we followed most of the approach from this paper[1]. Here we used the CVCL MIT Opencountry Dataset [[link]](http://cvcl.mit.edu/database.htm). We took a subset of images (11 images) used that to do the training and we used another subset of 10 images to colorize.
 
 **Flowchart:**
 
 ![Image](images/flowchart.png)
 
 > **Note-** Here we use Neural Network instead of SVM. Also, we didn’t use PCA(as shown in the paper), instead of reducing the dimension we directly feed the features to the Neural Network.
+
+**Observation:** The main problem with this method is there are a lot of discontinuous patches around. We applied [MedianBlur](https://en.wikipedia.org/wiki/Median_filter), but that was also not able to solve this issue.
 
 ### 3. Convolutional Neural Network (CNN)
 

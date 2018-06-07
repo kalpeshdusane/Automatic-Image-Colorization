@@ -38,9 +38,12 @@ Here we first resize the image to (200,200) size and then feed each pixel value 
 
 ![image](readmeImages/NN.png)
 
-> Simple Feed Forward Neural Network takes pixel as input gives a,b value as Output.
+> **Simple Feed Forward Neural Network takes pixel as input gives a,b value as Output.**
 
 **Observation:** The result we get is nowhere near great, but still, we can feel some sort of colorization. It is because only the pixel’s intensity is not enough to predict the color as *Lab color space is a decorrelated colorspace there is no correlation between the L and ab channels*.
+
+**Code:** `Naive_Fully Connected Network.ipynb`
+
 
 #### ii) Classification Problem
 
@@ -50,6 +53,8 @@ Here as a feature, we take the L values of a patch of size 3x3 around the pixel,
 ![Output Image](readmeImages/NN_1.png)
 
 **Observation:** It is not enough to only pass the raw pixels of the 3x3 patch around the particular pixel. One reason why this is failing can be due to the flattening of the 3x3 feature matrix we are doing to feed it to the neural network, that way it *loses all the spatial information*.
+
+**Code:** `Neural_Net_2.ipynb`
 
 ### 2. Combination of Feed Forward Neural Network and Hand Picked Features
 
@@ -76,6 +81,8 @@ Limitation of Data and computation resource we look into hand-picked features, w
 ![Image](readmeImages/output_2.png)
 
 **Observation:** The main problem with this method is there are a lot of discontinuous patches around. We applied [MedianBlur](https://en.wikipedia.org/wiki/Median_filter), but that was also not able to solve this issue.
+
+**Code:** `SURF_APPROACH.ipynb`
 
 ### 3. Convolutional Neural Network (CNN)
 

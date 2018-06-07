@@ -15,10 +15,23 @@ It is expressed in three numerical values *(L,a,b)* as
 - **a** for the green–red color components
 - **b** for the blue–yellow color components
 
+![image](images/lab_space.jpg)
+
 Each and every image while training phase is first converted to the Lab color space then passed it further for processing. The Luminance(L) channel is nothing but the grayscale image of the color image given for the training.
 
 *Why do we use Lab color space?*
 > The reason for using this over RGB because euclidean distance in Lab is more similar to how humans perceive color differences.
+
+## Approaches
+
+Here to build a solution, we are exploring various options from traditional hand-picked features to modern deep learning techniques.
+
+### 1. Feed Forward Neural Network
+
+### 2. Combination of Feed Forward Neural Network and Hand Picked Features
+
+### 3. Convolutional Neural Network (CNN)
+
 
 ## References
 

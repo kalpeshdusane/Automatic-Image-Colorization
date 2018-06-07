@@ -15,6 +15,10 @@ It is expressed in three numerical values *(L,a,b)* as
 - **a** for the green–red color components
 - **b** for the blue–yellow color components
 
+Each and every image is first converted to the Lab color space then passed it further for processing. 
+
+*Why do we use Lab color space?*
+> The reason for using this over RGB because euclidean distance in Lab is more similar to how humans perceive color differences.
 
 ## References
 

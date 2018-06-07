@@ -2,7 +2,7 @@
 
 Our task is to convert given grey-scale image into colorized(RGB) image.
 
-## Objective
+## Introduction
 
 Given a grayscale image input, our objective is to find out its believable color image without any manual intervention. Accomplishing this task is a difficult problem because there is often no “correct” attainable color for a given image as the color of the t-shirt can be anything from white to red or black.  
 

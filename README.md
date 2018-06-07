@@ -95,7 +95,7 @@ Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained 
 
 ![Image](readmeImages/VGG16.png)
 
-**CNN Architecture:**
+**CNN Architecture Overview:**
 
 ![Image](readmeImages/CNN.png)
 
@@ -104,6 +104,12 @@ Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained 
 ![Image](readmeImages/CNN_output.png)
 
 **Observation:** Training the CNN requires large no of data points, as we are using the CNN in the pixel patch level, we take around 2000 pixels from each of the 10 images of patch size 48x48. Also, CNN requires a lot of computation resources for this task and lot of parameter tuning.
+
+**Code:** `CNN_patch.ipynb
+
+## Best Result
+
+![Image](readmeImages/BestResultwithblur.png)
 
 ## References
 

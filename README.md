@@ -15,7 +15,7 @@ It is expressed in three numerical values *(L,a,b)* as
 - **a** for the green–red color components
 - **b** for the blue–yellow color components
 
-![image](images/lab_space.jpg)
+![image](readmeImages/lab_space.jpg)
 
 Each and every image while training phase is first converted to the Lab color space then passed it further for processing. The Luminance(L) channel is nothing but the grayscale image of the color image given for the training.
 
@@ -36,7 +36,7 @@ As the *Luminance*(**L**) channel is the grayscale image we have to find out cha
 Here we treat the problem of predicting ab from L as a *Regression problem*, we train two Separate MLP with (500,400,300) number of Units in the 3 hidden layer and try to predict **a** and **b**. 
 Here we first resize the image to (200,200) size and then feed each pixel value into the Neural Net and solve the problem like a regression.
 
-![image](images/NN.png)
+![image](readmeImages/NN.png)
 
 > Simple Feed Forward Neural Network takes pixel as input gives a,b value as Output.
 
@@ -47,7 +47,7 @@ Here we first resize the image to (200,200) size and then feed each pixel value 
 First, we discretize the color space to 8x8, by dividing every pixel value with 32 and rounding off to the nearest integer.
 Here as a feature, we take the L values of a patch of size 3x3 around the pixel, our feature size becomes 9 values and we try to classify each pixel in one of 64 ab value.
 
-![Output Image](images/NN_1.png)
+![Output Image](readmeImages/NN_1.png)
 
 **Observation:** It is not enough to only pass the raw pixels of the 3x3 patch around the particular pixel. One reason why this is failing can be due to the flattening of the 3x3 feature matrix we are doing to feed it to the neural network, that way it *loses all the spatial information*.
 
@@ -57,23 +57,23 @@ Limitation of Data and computation resource we look into hand-picked features, w
 
 **Training Set**
 
-![Image](images/training.png)
+![Image](readmeImages/training.png)
 
 **Test Set**
 
-![Image](images/test.png)
+![Image](readmeImages/test.png)
 
 **Flowchart:**
 
-![Image](images/flowchart.png)
+![Image](readmeImages/flowchart.png)
 
 > **Note-** Here we use Neural Network instead of SVM. Also, we didn’t use PCA(as shown in the paper), instead of reducing the dimension we directly feed the features to the Neural Network.
 
 **Outputs:**
 
-![Image](images/output_1.png)
+![Image](readmeImages/output_1.png)
 
-![Image](images/output_2.png)
+![Image](readmeImages/output_2.png)
 
 **Observation:** The main problem with this method is there are a lot of discontinuous patches around. We applied [MedianBlur](https://en.wikipedia.org/wiki/Median_filter), but that was also not able to solve this issue.
 
@@ -83,11 +83,11 @@ Now instead of hand picking features with feature descriptor SURF, we tried to u
 Our CNN works the same way like the previous method, Only for each randomly selected pixel instead of taking feature in 20x20 window size, we take the whole patch, normalize it and feed it into a CNN. 
 Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained the model with same sets of images as the training set.
 
-![Image](images/VGG16.png)
+![Image](readmeImages/VGG16.png)
 
 **Outputs:**
 
-![Image](images/CNN_output.png)
+![Image](readmeImages/CNN_output.png)
 
 **Observation:** Training the CNN requires large no of data points, as we are using the CNN in the pixel patch level, we take around 2000 pixels from each of the 10 images of patch size 48x48. Also, CNN requires a lot of computation resources for this task and lot of parameter tuning.
 

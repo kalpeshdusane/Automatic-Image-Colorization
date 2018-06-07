@@ -55,11 +55,25 @@ Here as a feature, we take the L values of a patch of size 3x3 around the pixel,
 
 Limitation of Data and computation resource we look into hand-picked features, we followed most of the approach from this paper[1]. Here we used the CVCL MIT Opencountry Dataset [[link]](http://cvcl.mit.edu/database.htm). We took a subset of images (11 images) used that to do the training and we used another subset of 10 images to colorize.
 
+**Training Set**
+
+![Image](images/training.png)
+
+**Test Set**
+
+![Image](images/test.png)
+
 **Flowchart:**
 
 ![Image](images/flowchart.png)
 
 > **Note-** Here we use Neural Network instead of SVM. Also, we didn’t use PCA(as shown in the paper), instead of reducing the dimension we directly feed the features to the Neural Network.
+
+**Outputs:**
+
+![Image](images/output_1.png)
+
+![Image](images/output_2.png)
 
 **Observation:** The main problem with this method is there are a lot of discontinuous patches around. We applied [MedianBlur](https://en.wikipedia.org/wiki/Median_filter), but that was also not able to solve this issue.
 
@@ -69,7 +83,11 @@ Now instead of hand picking features with feature descriptor SURF, we tried to u
 Our CNN works the same way like the previous method, Only for each randomly selected pixel instead of taking feature in 20x20 window size, we take the whole patch, normalize it and feed it into a CNN. 
 Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained the model with same sets of images as the training set.
 
-![Image](images/CNN.png)
+![Image](images/VGG16.png)
+
+**Outputs:**
+
+![Image](images/CNN_output.png)
 
 **Observation:** Training the CNN requires large no of data points, as we are using the CNN in the pixel patch level, we take around 2000 pixels from each of the 10 images of patch size 48x48. Also, CNN requires a lot of computation resources for this task and lot of parameter tuning.
 

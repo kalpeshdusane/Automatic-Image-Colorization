@@ -127,5 +127,5 @@ Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained 
   
 ## Interesting Application To do
 
-[Transferring Color to Greyscale Images](https://dl.acm.org/citation.cfm?id=566576) by Tomihisa Welsh, Michael Ashikhmin, and Klaus Mueller
+- [Transferring Color to Greyscale Images](https://dl.acm.org/citation.cfm?id=566576) by Tomihisa Welsh, Michael Ashikhmin, and Klaus Mueller
 

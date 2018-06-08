@@ -1,6 +1,8 @@
-# Automatic-Image-Colorization
+# Automatic-Image-Colorization 
 
 Our task is to convert given grey-scale image into colorized(RGB) image.
+
+[![Build Status][travis-image]][travis-url]
 
 ## Introduction
 
@@ -128,4 +130,8 @@ Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained 
 ## Interesting Application To do
 
 - [Transferring Color to Greyscale Images](https://dl.acm.org/citation.cfm?id=566576) by Tomihisa Welsh, Michael Ashikhmin, and Klaus Mueller
+
+<!-- Markdown link & img dfn's -->
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 

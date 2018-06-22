@@ -97,10 +97,6 @@ Here we used the [VGG 16](https://www.kaggle.com/keras/vgg16) model, we trained 
 
 ![Image](readmeImages/VGG16.png)
 
-**CNN Architecture Overview:**
-
-![Image](readmeImages/CNN.png)
-
 **Outputs:**
 
 ![Image](readmeImages/CNN_output.png)
